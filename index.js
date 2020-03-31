@@ -5,6 +5,13 @@ console.log("working");
 //Write a function "min" that takes 2 arguements which should be numbers and returns to lowest of the two 
 //Code Under this line
 
+/*
+ * Gets a minimum of two numbers
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {number} 
+ */
+
 function min (num1, num2){
     return Math.min(num1, num2);
 }
@@ -15,6 +22,13 @@ function min (num1, num2){
 /*Write a function "range" which takes two arguments "start" and "end" that returns an array containing all of the 
 integers between and including start and end in sequential order */
 //code under this line 
+
+/*
+ * Gets a range of numbers
+ * @param {number} start <
+ * @param {number} end >
+ * @returns {number}
+ */
 function range(start, end){
     var arr = [];
     for(var i=start; i<=end; i++){
@@ -25,6 +39,13 @@ function range(start, end){
 
 
 /*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum*/
+
+/*
+ *  Gets a sum of an array
+ * @param {array} arr
+ * @returns {number}
+ */
+
 function sum(arr){
     return arr.reduce(((accumulator, currentValue) => 
         accumulator + currentValue
@@ -39,12 +60,20 @@ number is divisble both by 5 and by 3 print "FIZZ BUZZ"
 
 For this problem consider researching the modulus operator */
 
+/*
+ * Prints a list of 1-100 {numbers} and {strings} 
+ * {numbers} divisible by 3 and 5 return {string} FIZZ BUZZ
+ * {numbers} divisible by 3 return {string} BUZZ
+ * {numbers} divisible by 5 return {string} FIZZ
+ * @returns {number} && {string}
+ */
+
 function fizzBuzz(){
     //CODE HERE
     const arr = range(1,100);
     arr.forEach(element =>{
         if(element%3 == 0 && element%5 == 0 ){
-            console.log("FIZZBIZZ")
+            console.log("FIZZ BUZZ")
         }
         else if(element%3 == 0){
             console.log("BUZZ");
@@ -72,6 +101,13 @@ as an argument and returns a number that indicate how many uppercase 'B's that s
 write another function which extends the first function by taking in a second arguement which is the character you wish
 to count the number of.  */
 
+/*
+ * Gets a count of how many capital Bs there are in a {string}
+ * @param {string} string
+ * @returns {number}
+ */
+
+
 function countBs (string){
     for(var i = 0, len = string.length, count=0, ch; i < len; ++i)
     {
@@ -80,6 +116,13 @@ function countBs (string){
     }
     return count
 }
+
+/*
+ * Gets a count of how many specified characters there are in a {string}
+ * @param {string} string
+ * @param {character} character
+ * @returns {number}
+ */
 
 function countChars (string, character){
     for(var i = 0, len = string.length, count=0, ch; i < len; ++i)
@@ -106,6 +149,11 @@ It may be useful to know that you can find the length of a string by writing .le
 eg. let abc = 'abc';
     console.log(abc.length);
 */
+
+/*
+ * Prints a triangle of base 7 # wide
+ * @returns {strings}
+ */
 
 function sevenLoop () {
     //CODE HERE
@@ -136,6 +184,12 @@ __________________________________________
 __________________________________________
 
 once you have completed the program take in an arguement that varies the size of the grid */
+
+/*
+ * Prints a chessboard pattern with #'s, base is 8 rows. User can add rows in multiples of 2 by using gridSize @param.
+ * @param {number} gridSize
+ * @returns {strings}
+ */
 
 function chessBoard (gridSize){
 const black=" # # # #";
