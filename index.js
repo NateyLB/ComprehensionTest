@@ -41,7 +41,10 @@ function fizzBuzz(){
     //CODE HERE
     const arr = range(1,100);
     arr.forEach(element =>{
-        if(element%3 == 0){
+        if(element%3 == 0 && element%5 == 0 ){
+            console.log("FIZZBIZZ")
+        }
+        else if(element%3 == 0){
             console.log("BUZZ");
         }
         else if(element%5 == 0){
