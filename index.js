@@ -25,10 +25,12 @@ function range(start, end){
 
 
 /*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum*/
-function sum(num1, num2){
-    return num1 + num2;
+function sum(arr){
+    return arr.reduce(((accumulator, currentValue) => 
+        accumulator + currentValue
+    ),0)
 }
-
+ console.log(sum([1,2,3,4,5,6,7,8]))
 
 
 /* Write a program that uses console.log to print all numbers from 1 to 100 with three exceptions for numbers divisble
@@ -87,9 +89,8 @@ function countChars (string, character){
     }
     return count
 }
-
-console.log(countBs("Bello BaBy I baby"));
-console.log(countChars("Eveyrythin EEE E ee E", 'E'));
+countBs("BB bb BB bb BB bb BB");
+countChars("ee EE ee EE ee EE", "E");
 /* Write a loop that makes seven calls to console.log to output the following triangle:
 
 ________________________________
@@ -114,6 +115,7 @@ function sevenLoop () {
     console.log(string)
     }
     }
+
     sevenLoop();
 
 /* Write a program that creates a string which represents an 8x8 grid. At each posistion of the grid  there is either
@@ -144,5 +146,5 @@ for(var i = 0; i<4+gridSize; i++){
 }
 }
 
-
+chessBoard(2);
 //ANY ADDITIONAL COMMENTS OR CONCERNS CAN BE LEFT UNDER THIS LINE 
